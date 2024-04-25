@@ -1,0 +1,60 @@
+# YOLOv5 🚀 by Ultralytics, AGPL-3.0 license
+# COCO 2017 dataset http://cocodataset.org by Microsoft
+# Example usage: python train.py --data coco.yaml
+# parent
+# ├── yolov5
+# └── datasets
+#     └── coco  ← downloads here (20.1 GB)
+
+# Train/val/test sets as 1) dir: path/to/imgs, 2) file: path/to/imgs.txt, or 3) list: [path/to/imgs1, path/to/imgs2, ..]
+path: /GTSRB # dataset root dir
+train: images/train
+ # train images (relative to 'path') 118287 images
+val: images/val # val images (relative to 'path') 5000 images
+test: images/test # 20288 of 40670 images, submit to https://competitions.codalab.org/competitions/20794
+
+# Classes
+names:
+  0: 速限20
+  1: 速限30
+  2: 速限50
+  3: 速限60
+  4: 速限70
+  5: 速限80
+  6: 解除速限80
+  7: 速限100
+  8: 速限120
+  9: 禁止超車
+  10: 禁止貨車超車
+  11: 車輛有先行權
+  12: 先行權
+  13: 無先行權
+  14: 停車再開
+  15: 禁止通行
+  16: 禁止卡車進入
+  17: 禁止車輛進入
+  18: 危險
+  19: 左彎
+  20: 右彎
+  21: 連續彎路
+  22: 路面不平
+  23: 路滑
+  24: 道路限縮
+  25: 施工
+  26: 注意號誌
+  27: 當心行人穿越
+  28: 當心兒童
+  29: 當心腳踏車
+  30: 當心下雪
+  31: 當心野生動物
+  32: 禁制解除
+  33: 僅准右轉
+  34: 僅准左轉
+  35: 僅准直行
+  36: 僅准直行及右轉
+  37: 僅准直行及左轉
+  38: 靠右行駛
+  39: 靠左行駛
+  40: 圓環遵循方向
+  41: 解除禁止超車
+  42: 解除禁止貨車超車
